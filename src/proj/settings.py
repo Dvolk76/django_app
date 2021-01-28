@@ -25,7 +25,7 @@ SECRET_KEY = 'dvz^pf71beyrempxjz^(b(o6kapnhe7o3aio&$)5-s++80dt+*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://dvolk76.pythonanywhere.com']
 
 
 # Application definition
@@ -118,3 +118,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/dvolk76/django_app/static'
