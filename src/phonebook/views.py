@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from phonebook.models import City
 # with open(file) as f:
 #     for line in f:
@@ -9,5 +8,5 @@ from phonebook.models import City
 
 # Create your views here.
 def home_page(request):
-    city = City.objects.last()
-    return HttpResponse(f"Последний добавленный город {city.name}. Всего добавлено {city.pk} городов")
+    city = City.objects.first()
+    return HttpResponse(f"Первый добавленный город {city.name}. pk - {city.pk}")
