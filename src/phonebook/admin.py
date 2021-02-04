@@ -1,5 +1,26 @@
 from django.contrib import admin
-from . models import Persone, Phone
+from . import models
 # Register your models here.
-admin.site.register(Persone)
-admin.site.register(Phone)
+
+
+class CityAdmin(admin.ModelAdmin):
+    list_display = [
+        'pk',
+        'name',
+        'description',
+        'created',
+        'updated'
+    ]
+
+
+class AddressAdmin(admin.ModelAdmin):
+    list_display = [
+        'pk',
+        'city',
+        'street',
+        'building_number',
+        'block'
+    ]
+
+admin.site.register(models.Address, AddressAdmin)
+admin.site.register(models.City, CityAdmin)
